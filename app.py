@@ -70,7 +70,12 @@ def login():
 
 @app.route('/welcome/<username>')
 def welcome(username):
-    return f"<h1> Welcome, {username}!</h1>"
+    return f"<h1> Welcome {username}!</h1><br> <a href='/logout'>Logout account</a>"
+
+
+@app.route('/logout')
+def logout():
+    return render_template('logout.html')
 
 
 # if __name__ == '__main__':
